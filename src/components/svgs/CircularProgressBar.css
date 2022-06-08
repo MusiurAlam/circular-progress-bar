@@ -1,0 +1,32 @@
+.canvas {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progressNumber {
+    position: absolute;
+    font-weight: 700;
+    color: #434343;
+}
+
+.circularProgressbarContainer {
+    position: relative;
+    box-shadow: 6px 6px 10px -1px #d6d6d6, -6px -6px 10px -1px #ffffff;
+    border-radius: 50%;
+}
+
+.circle {
+    stroke-dasharray: var(--stroke-arr);
+    stroke-dashoffset: var(--stroke-arr);
+
+    animation: fillup 1s linear forwards;
+}
+
+@keyframes fillup {
+    100% {
+        stroke-dashoffset: var(--stroke-progress);
+    }
+}
